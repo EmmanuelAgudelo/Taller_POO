@@ -1,0 +1,16 @@
+D:\Desktop\Taller POO\bin\Debug\net5.0\Desktop.exe
+D:\Desktop\Taller POO\bin\Debug\net5.0\Desktop.deps.json
+D:\Desktop\Taller POO\bin\Debug\net5.0\Desktop.runtimeconfig.json
+D:\Desktop\Taller POO\bin\Debug\net5.0\Desktop.runtimeconfig.dev.json
+D:\Desktop\Taller POO\bin\Debug\net5.0\Desktop.dll
+D:\Desktop\Taller POO\bin\Debug\net5.0\ref\Desktop.dll
+D:\Desktop\Taller POO\bin\Debug\net5.0\Desktop.pdb
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.csproj.AssemblyReference.cache
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.AssemblyInfoInputs.cache
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.AssemblyInfo.cs
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.csproj.CoreCompileInputs.cache
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.dll
+D:\Desktop\Taller POO\obj\Debug\net5.0\ref\Desktop.dll
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.pdb
+D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.genruntimeconfig.cache
