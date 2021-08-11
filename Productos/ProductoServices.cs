@@ -27,10 +27,10 @@ namespace Taller_POO.Productos
             Console.WriteLine("digite el codigo del producto");
             string codigo = Console.ReadLine();
 
-            var producto = listaProductos.Where(p => p.codigo == codigo).FirstOrDefault();
+            var producto = listaProductos.Where(p => p.Codigo == codigo).FirstOrDefault();
 
             Console.WriteLine("información del producto \n");
-            Console.WriteLine($"Código del producto: {producto.codigo}\nNombre del producto: {producto.nombre}\nprecio del producto: {producto.precio}\ncantidad disponible: {producto.cantidad}");
+            Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
 
         }
         public void EditarProducto(List<Producto> listaProductos)
@@ -38,10 +38,10 @@ namespace Taller_POO.Productos
             Console.WriteLine("digite el codigo del producto");
             string codigo = Console.ReadLine();
 
-            var producto = listaProductos.Where(p => p.codigo == codigo).FirstOrDefault();
+            var producto = listaProductos.Where(p => p.Codigo == codigo).FirstOrDefault();
 
             Console.WriteLine("información del producto \n");
-            Console.WriteLine($"Código del producto: {producto.codigo}\nNombre del producto: {producto.nombre}\nprecio del producto: {producto.precio}\ncantidad disponible: {producto.cantidad}");
+            Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
             Console.WriteLine("digite el nombre del producto");
             string nombre = Console.ReadLine();
             Console.WriteLine("digite el precio del producto");
@@ -49,9 +49,9 @@ namespace Taller_POO.Productos
             Console.WriteLine("digite la cantidad del producto");
             int cantidad = int.Parse(Console.ReadLine());
 
-            producto.nombre = nombre;
-            producto.precio = precio;
-            producto.cantidad = cantidad;
+            producto.Nombre = nombre;
+            producto.Precio = precio;
+            producto.Cantidad = cantidad;
 
             Console.WriteLine("producto editado satisfactoriamente");
         }
@@ -61,9 +61,9 @@ namespace Taller_POO.Productos
             Console.WriteLine("digite el codigo del producto");
             string codigo = Console.ReadLine();
 
-            var producto = listaProductos.Where(p => p.codigo == codigo).FirstOrDefault();
+            var producto = listaProductos.Where(p => p.Codigo == codigo).FirstOrDefault();
             Console.WriteLine("información del producto \n");
-            Console.WriteLine($"Código del producto: {producto.codigo}\nNombre del producto: {producto.nombre}\nprecio del producto: {producto.precio}\ncantidad disponible: {producto.cantidad}");
+            Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
             listaProductos.Remove(producto);
 
             Console.WriteLine("producto eliminado satisfactoriamente");
