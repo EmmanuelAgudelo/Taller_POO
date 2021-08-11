@@ -2,17 +2,17 @@ namespace Taller_POO.Cliente
 {
     public class Cliente
     {
-        public string documento;
-        public string nombre;
-        public string direccion;
-        public string telefono;
+        public string Documento;
+        public string Nombre;
+        public string Direccion;
+        public string Telefono;
 
         public Cliente(string documento, string nombre, string direccion, string telefono)
         {
-            this.documento = documento;
-            this.nombre = nombre;
-            this.direccion = direccion;
-            this.telefono = telefono;
+            this.Documento = documento;
+            this.Nombre = nombre;
+            this.Direccion = direccion;
+            this.Telefono = telefono;
 
         }
 
