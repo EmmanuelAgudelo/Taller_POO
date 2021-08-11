@@ -29,9 +29,9 @@ namespace Taller_POO.Cliente
             string documento = Console.ReadLine();
 
             //var consulta = (from cliente in ListaClientes where cliente.documento.Equals(documento) select cliente).FirstOrDefault();
-            var cliente = ListaClientes.Where(c => c.documento == documento).FirstOrDefault();
+            var cliente = ListaClientes.Where(c => c.Documento == documento).FirstOrDefault();
             Console.WriteLine("datos del cliente consultado\n");
-            Console.WriteLine($"documento: {cliente.documento}\nnombre: {cliente.nombre}\ndireccion: {cliente.direccion}\ntelefono: {cliente.telefono} \n");
+            Console.WriteLine($"documento: {cliente.Documento}\nnombre: {cliente.Nombre}\ndireccion: {cliente.Direccion}\ntelefono: {cliente.Telefono} \n");
 
         }
         public void EditarCliente(List<Cliente> ListaClientes)
@@ -40,20 +40,20 @@ namespace Taller_POO.Cliente
             string documento = Console.ReadLine();
 
             //var consulta = (from cliente in ListaClientes where cliente.documento.Equals(documento) select cliente).FirstOrDefault();
-            var cliente = ListaClientes.Where(c => c.documento == documento).FirstOrDefault();
+            var cliente = ListaClientes.Where(c => c.Documento == documento).FirstOrDefault();
             Console.WriteLine("datos del cliente \n");
-            Console.WriteLine($"documento: {cliente.documento}\nnombre: {cliente.nombre}\ndireccion: {cliente.direccion}\ntelefono: {cliente.telefono} \n");
+            Console.WriteLine($"documento: {cliente.Documento}\nnombre: {cliente.Nombre}\ndireccion: {cliente.Direccion}\ntelefono: {cliente.Telefono} \n");
             Console.WriteLine("digite el nombre del cliente:");
             string nombre = Console.ReadLine();
             Console.WriteLine("digite la dirección del cliente:");
             string direccion = Console.ReadLine();
             Console.WriteLine("digite el telefono del cliente:");
             string telefono = Console.ReadLine();
-            cliente.nombre = nombre;
-            cliente.direccion = direccion;
-            cliente.telefono = telefono;
+            cliente.Nombre = nombre;
+            cliente.Direccion = direccion;
+            cliente.Telefono = telefono;
             Console.WriteLine("datos del cliente \n");
-            Console.WriteLine($"documento: {cliente.documento}\nnombre: {cliente.nombre}\ndireccion: {cliente.direccion}\ntelefono: {cliente.telefono} \n");
+            Console.WriteLine($"documento: {cliente.Documento}\nnombre: {cliente.Nombre}\ndireccion: {cliente.Direccion}\ntelefono: {cliente.Telefono} \n");
             Console.WriteLine("cliente editado satisfactoriamente");
         }
 
@@ -63,9 +63,9 @@ namespace Taller_POO.Cliente
             string documento = Console.ReadLine();
 
             //var consulta = (from cliente in ListaClientes where cliente.documento.Equals(documento) select cliente).FirstOrDefault();
-            var cliente = ListaClientes.Where(c => c.documento == documento).FirstOrDefault();
+            var cliente = ListaClientes.Where(c => c.Documento == documento).FirstOrDefault();
             Console.WriteLine("datos del cliente \n");
-            Console.WriteLine($"documento: {cliente.documento}\nnombre: {cliente.nombre}\ndireccion: {cliente.direccion}\ntelefono: {cliente.telefono} \n");
+            Console.WriteLine($"documento: {cliente.Documento}\nnombre: {cliente.Nombre}\ndireccion: {cliente.Direccion}\ntelefono: {cliente.Telefono} \n");
             ListaClientes.Remove(cliente);
             Console.WriteLine("cliente eliminado satisfactoriamente");
         }

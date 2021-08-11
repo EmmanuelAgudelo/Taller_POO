@@ -15,32 +15,14 @@ namespace Desktop
             if (pregunta.Equals("si", StringComparison.OrdinalIgnoreCase))
             {
                 var ListaClientes = new List<Cliente>();
-                ListaClientes.Add(new Cliente("1214512678", "Roberto", "calle 48 #34-36", "3421561278"));
-                ListaClientes.Add(new Cliente("1214514167", "Alberto", "calle 52 #12-14", "3215435789"));
-                ListaClientes.Add(new Cliente("1214556778", "Emmanuelo", "calle 78 20-22", "3421446758"));
-                ListaClientes.Add(new Cliente("1214534757", "Pedrosky", "calle 24 #24-26", "3153456676"));
-                ListaClientes.Add(new Cliente("1564788989", "Admin ", "calle 28 #26-28", "3645767879"));
-                ListaClientes.Add(new Cliente("1564786799", "Julieta ", "calle 28 #30-32", "3645797879"));
-                ListaClientes.Add(new Cliente("1564778989", "Nilo ", "calle 29 #44-46", "3645347879"));
-                ListaClientes.Add(new Cliente("1564728989", "Anselmo", "calle 30 #26-28", "3644667879"));
-                ListaClientes.Add(new Cliente("1564758989", "Aura", "calle 40 #46-48", "3645763779"));
-                ListaClientes.Add(new Cliente("1564808980", "Pascuala ", "calle 20 #46-48", "3645744879"));
 
                 var ListaProductos = new List<Producto>();
-                ListaProductos.Add(new Producto("1215", "Arroz", 3000, 16));
-                ListaProductos.Add(new Producto("1456", "Papa", 2000, 40));
-                ListaProductos.Add(new Producto("1128", "Aguacate", 2000, 20));
-                ListaProductos.Add(new Producto("1459", "Manzana", 1200, 20));
-                ListaProductos.Add(new Producto("1486", "Limpido", 4000, 20));
-                ListaProductos.Add(new Producto("1557", "Jabon", 3000, 30));
-                ListaProductos.Add(new Producto("1647", "Pera", 1700, 10));
-                ListaProductos.Add(new Producto("1888", "Avena", 3000, 15));
-                ListaProductos.Add(new Producto("1657", "Mortadela", 5000, 15));
-                ListaProductos.Add(new Producto("1688", "panela", 4000, 20));
+
+                String NombreEmp = moduloConfiguracion( ListaClientes, ListaProductos);
 
                 while (pregunta.Equals("si", StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine($"-----------------nombre de la empresa-----------------");
+                    Console.WriteLine($"Nombre de la Empresa: {NombreEmp}\n");
                     Console.WriteLine("Digite a que modulo desea ingresar");
                     Console.WriteLine("1.Módulo de clientes");
                     Console.WriteLine("2.Módulo de productos");
@@ -173,7 +155,7 @@ namespace Desktop
                 ProductService.AddProduct(ListaProductos);
                 foreach (var producto in ListaProductos)
                 {
-                    Console.WriteLine($"Código del producto: {producto.codigo}\nNombre del producto: {producto.nombre}\nprecio del producto: {producto.precio}\ncantidad disponible: {producto.cantidad}");
+                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
                 }
             }
             else if (accion == 2)
@@ -182,7 +164,7 @@ namespace Desktop
                 ProductService.BuscarProducto(ListaProductos);
                 foreach (var producto in ListaProductos)
                 {
-                    Console.WriteLine($"Código del producto: {producto.codigo}\nNombre del producto: {producto.nombre}\nprecio del producto: {producto.precio}\ncantidad disponible: {producto.cantidad}");
+                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
                 }
             }
             else if (accion == 3)
@@ -191,7 +173,7 @@ namespace Desktop
                 ProductService.EditarProducto(ListaProductos);
                 foreach (var producto in ListaProductos)
                 {
-                    Console.WriteLine($"Código del producto: {producto.codigo}\nNombre del producto: {producto.nombre}\nprecio del producto: {producto.precio}\ncantidad disponible: {producto.cantidad}");
+                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
                 }
             }
             else if (accion == 4)
@@ -200,7 +182,7 @@ namespace Desktop
                 ProductService.EliminarProducto(ListaProductos);
                 foreach (var producto in ListaProductos)
                 {
-                    Console.WriteLine($"Código del producto: {producto.codigo}\nNombre del producto: {producto.nombre}\nprecio del producto: {producto.precio}\ncantidad disponible: {producto.cantidad}");
+                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
                 }
             }
         }
@@ -226,7 +208,7 @@ namespace Desktop
             ListaClientes.Add(new Cliente("1564778989", "Nilo ", "calle 29 #44-46", "3645347879"));
             ListaClientes.Add(new Cliente("1564728989", "Anselmo", "calle 30 #26-28", "3644667879"));
             ListaClientes.Add(new Cliente("1564758989", "Aura", "calle 40 #46-48", "3645763779"));
-                ListaClientes.Add(new Cliente("1564808980", "Pascuala ", "calle 20 #46-48", "3645744879"));
+            ListaClientes.Add(new Cliente("1564808980", "Pascuala ", "calle 20 #46-48", "3645744879"));
 
             ListaProductos.Add(new Producto("1215", "Arroz", 3000, 16));
             ListaProductos.Add(new Producto("1456", "Papa", 2000, 40));
@@ -238,6 +220,8 @@ namespace Desktop
             ListaProductos.Add(new Producto("1888", "Avena", 3000, 15));
             ListaProductos.Add(new Producto("1657", "Mortadela", 5000, 15));
             ListaProductos.Add(new Producto("1688", "panela", 4000, 20));
+
+            return NombreE;
 
         }
     }
