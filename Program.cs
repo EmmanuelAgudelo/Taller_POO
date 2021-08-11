@@ -157,10 +157,6 @@ namespace Desktop
 
             }
 
-
-
-
-
         }
         public static void moduloProductos(List<Producto> ListaProductos)
         {
@@ -216,9 +212,33 @@ namespace Desktop
         {
 
         }
-        public static void moduloConfiguracion()
+        public static String moduloConfiguracion(List<Cliente> ListaClientes, List<Producto> ListaProductos)
         {
-            
+            Console.WriteLine("Digite el nombre de la empresa: ");
+            var NombreE = Console.ReadLine();
+
+            ListaClientes.Add(new Cliente("1214512678", "Roberto", "calle 48 #34-36", "3421561278"));
+            ListaClientes.Add(new Cliente("1214514167", "Alberto", "calle 52 #12-14", "3215435789"));
+            ListaClientes.Add(new Cliente("1214556778", "Emmanuelo", "calle 78 20-22", "3421446758"));
+            ListaClientes.Add(new Cliente("1214534757", "Pedrosky", "calle 24 #24-26", "3153456676"));
+            ListaClientes.Add(new Cliente("1564788989", "Admin ", "calle 28 #26-28", "3645767879"));
+            ListaClientes.Add(new Cliente("1564786799", "Julieta ", "calle 28 #30-32", "3645797879"));
+            ListaClientes.Add(new Cliente("1564778989", "Nilo ", "calle 29 #44-46", "3645347879"));
+            ListaClientes.Add(new Cliente("1564728989", "Anselmo", "calle 30 #26-28", "3644667879"));
+            ListaClientes.Add(new Cliente("1564758989", "Aura", "calle 40 #46-48", "3645763779"));
+                ListaClientes.Add(new Cliente("1564808980", "Pascuala ", "calle 20 #46-48", "3645744879"));
+
+            ListaProductos.Add(new Producto("1215", "Arroz", 3000, 16));
+            ListaProductos.Add(new Producto("1456", "Papa", 2000, 40));
+            ListaProductos.Add(new Producto("1128", "Aguacate", 2000, 20));
+            ListaProductos.Add(new Producto("1459", "Manzana", 1200, 20));
+            ListaProductos.Add(new Producto("1486", "Limpido", 4000, 20));
+            ListaProductos.Add(new Producto("1557", "Jabon", 3000, 30));
+            ListaProductos.Add(new Producto("1647", "Pera", 1700, 10));
+            ListaProductos.Add(new Producto("1888", "Avena", 3000, 15));
+            ListaProductos.Add(new Producto("1657", "Mortadela", 5000, 15));
+            ListaProductos.Add(new Producto("1688", "panela", 4000, 20));
+
         }
     }
 }
