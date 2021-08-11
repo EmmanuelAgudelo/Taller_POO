@@ -108,7 +108,12 @@ namespace Desktop
         }
         static void Main(string[] args)
         {
-            programa();
+            try{
+                programa();
+            }   catch(Exception e){
+                Console.WriteLine($"{e}");
+                Console.WriteLine("Ejecute de nuevo el programa. <3costeños");
+            }
         }
 
         public static void ModuloCliente(List<Cliente> ListaClientes)
@@ -213,7 +218,7 @@ namespace Desktop
         }
         public static void moduloConfiguracion()
         {
-
+            
         }
     }
 }
