@@ -14,3 +14,19 @@ D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.dll
 D:\Desktop\Taller POO\obj\Debug\net5.0\ref\Desktop.dll
 D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.pdb
 D:\Desktop\Taller POO\obj\Debug\net5.0\Desktop.genruntimeconfig.cache
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.csproj.AssemblyReference.cache
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.AssemblyInfoInputs.cache
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.AssemblyInfo.cs
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.dll
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\ref\Desktop.dll
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.pdb
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\bin\Debug\net5.0\Desktop.exe
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\bin\Debug\net5.0\Desktop.deps.json
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\bin\Debug\net5.0\Desktop.runtimeconfig.json
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\bin\Debug\net5.0\Desktop.runtimeconfig.dev.json
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\bin\Debug\net5.0\Desktop.dll
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\bin\Debug\net5.0\ref\Desktop.dll
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\bin\Debug\net5.0\Desktop.pdb
+C:\Users\Jorge Enrique Valenc\Desktop\Taller_POO\obj\Debug\net5.0\Desktop.genruntimeconfig.cache
