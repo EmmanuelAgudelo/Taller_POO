@@ -153,37 +153,25 @@ namespace Desktop
             {
                 var ProductService = new ProductoServices();
                 ProductService.AddProduct(ListaProductos);
-                foreach (var producto in ListaProductos)
-                {
-                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
-                }
+
             }
             else if (accion == 2)
             {
                 var ProductService = new ProductoServices();
                 ProductService.BuscarProducto(ListaProductos);
-                foreach (var producto in ListaProductos)
-                {
-                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
-                }
+
             }
             else if (accion == 3)
             {
                 var ProductService = new ProductoServices();
                 ProductService.EditarProducto(ListaProductos);
-                foreach (var producto in ListaProductos)
-                {
-                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
-                }
+
             }
             else if (accion == 4)
             {
                 var ProductService = new ProductoServices();
                 ProductService.EliminarProducto(ListaProductos);
-                foreach (var producto in ListaProductos)
-                {
-                    Console.WriteLine($"Código del producto: {producto.Codigo}\nNombre del producto: {producto.Nombre}\nprecio del producto: {producto.Precio}\ncantidad disponible: {producto.Cantidad}");
-                }
+
             }
         }
         public static void moduloVentas()
