@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0yUX1vVdoxoRMndQHQrpTpWDJK6ToXEvhxSWkmdnOU2pVIC6yaKrG8IQIfcCpdnG5Amt5PfltwVc6U85axpHGA==",
+  "dgSpecHash": "+6MvaB8ZsD1MOLJI2LaqcngJH2aeuq0Ndt3dYsO7jEZOTgTSCDw1vVFLzkPu5JpKYJ1CKURKjgIZBRVF8FFuXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jorge Enrique Valenc\\Desktop\\Taller_POO\\Desktop.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Jorge Enrique Valenc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.7\\microsoft.netcore.app.host.win-x64.5.0.7.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\emman\\OneDrive\\Escritorio\\Taller_POO\\Desktop.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
