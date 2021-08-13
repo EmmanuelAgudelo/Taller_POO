@@ -18,7 +18,7 @@ namespace Desktop
 
                 var ListaProductos = new List<Producto>();
 
-                String NombreEmp = moduloConfiguracion( ListaClientes, ListaProductos);
+                String NombreEmp = moduloConfiguracion(ListaClientes, ListaProductos);
 
                 while (pregunta.Equals("si", StringComparison.OrdinalIgnoreCase))
                 {
@@ -70,7 +70,7 @@ namespace Desktop
                         string preguntaModuloReportes = "si";
                         while (preguntaModuloReportes.Equals("si", StringComparison.OrdinalIgnoreCase))
                         {
-                            moduloReportes();
+                            moduloReportes(ListaClientes, ListaProductos);
                             Console.WriteLine("desea realizar otra operación en este modulo");
                             preguntaModuloReportes = Console.ReadLine();
 
@@ -90,9 +90,12 @@ namespace Desktop
         }
         static void Main(string[] args)
         {
-            try{
+            try
+            {
                 programa();
-            }   catch(Exception e){
+            }
+            catch (Exception e)
+            {
                 Console.WriteLine($"{e}");
                 Console.WriteLine("Ejecute de nuevo el programa. <3costeños");
             }
@@ -178,8 +181,23 @@ namespace Desktop
         {
 
         }
-        public static void moduloReportes()
+        public static void moduloReportes(List<Cliente> ListaClientes, List<Producto> ListaProductos)
         {
+
+            System.Console.WriteLine("\n---------------------CLIENTES----------------------\n");
+            System.Console.WriteLine("Documento      Nombre       Dirección       Telefono\n");
+            foreach (var item in ListaClientes)
+            {
+                // Console.Write(string.Format("{0} | {1} | {2} | {3}\n", item.Documento, item.Nombre, item.Direccion, item.Telefono));
+                System.Console.WriteLine($"{item.Documento,10:c} | {item.Nombre,9:c} | {item.Direccion,14:c} | {item.Telefono,10:c}");
+            }
+
+            System.Console.WriteLine("\n---------------PRODUCTOS---------------\n");
+            System.Console.WriteLine("Código       Nombre       Precio     cantidad\n");
+            foreach (var item in ListaProductos)
+            {
+                System.Console.WriteLine($"{item.Codigo,6:c} | {item.Nombre,12:c} | {item.Precio,7:c} | {item.Cantidad,5}");
+            }
 
         }
         public static String moduloConfiguracion(List<Cliente> ListaClientes, List<Producto> ListaProductos)
@@ -189,7 +207,7 @@ namespace Desktop
 
             ListaClientes.Add(new Cliente("1214512678", "Roberto", "calle 48 #34-36", "3421561278"));
             ListaClientes.Add(new Cliente("1214514167", "Alberto", "calle 52 #12-14", "3215435789"));
-            ListaClientes.Add(new Cliente("1214556778", "Emmanuelo", "calle 78 20-22", "3421446758"));
+            ListaClientes.Add(new Cliente("1214556778", "Emmanuelo", "calle 78 #20-22", "3421446758"));
             ListaClientes.Add(new Cliente("1214534757", "Pedrosky", "calle 24 #24-26", "3153456676"));
             ListaClientes.Add(new Cliente("1564788989", "Admin ", "calle 28 #26-28", "3645767879"));
             ListaClientes.Add(new Cliente("1564786799", "Julieta ", "calle 28 #30-32", "3645797879"));
