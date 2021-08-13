@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Taller_POO.Cliente;
 using Taller_POO.Productos;
+using Taller_POO.Ventas;
 namespace Desktop
 {
     class Program
@@ -17,6 +18,8 @@ namespace Desktop
                 var ListaClientes = new List<Cliente>();
 
                 var ListaProductos = new List<Producto>();
+
+                var ListaVentas = new List<Venta>();
 
                 String NombreEmp = moduloConfiguracion(ListaClientes, ListaProductos);
 
@@ -58,7 +61,7 @@ namespace Desktop
                         string preguntaModuloVenta = "si";
                         while (preguntaModuloVenta.Equals("si", StringComparison.OrdinalIgnoreCase))
                         {
-                            moduloVentas();
+                            moduloVentas(ListaClientes, ListaProductos, ListaVentas);
                             Console.WriteLine("desea realizar otra operación en este modulo");
                             preguntaModuloVenta = Console.ReadLine();
 
@@ -177,8 +180,29 @@ namespace Desktop
 
             }
         }
-        public static void moduloVentas()
+        public static void moduloVentas(List<Cliente> ListaClientes, List<Producto> ListaProductos, List<Venta> ListaVentas)
         {
+            Console.WriteLine("digite la acción que desea realizar");
+            string pregunta = Console.ReadLine();
+            if (pregunta == "1")
+            {
+                var venta = new VentasServices();
+                venta.addFactura(ListaClientes, ListaProductos, ListaVentas);
+            }
+            if (pregunta == "2")
+            {
+                foreach (var Factura in ListaVentas)
+                {
+                    Console.WriteLine($"numero factura: {Factura.numeroFactura}\nCedula cliente: {Factura.documento}\nValor total: {Factura.ValorTotal}");
+
+                    foreach (var producto in Factura.productos)
+                    {
+                        Console.WriteLine($"Nombre: {producto.nombre}........{producto.precio}x{producto.cantidad}");
+                    }
+                }
+            }
+
+
 
         }
         public static void moduloReportes(List<Cliente> ListaClientes, List<Producto> ListaProductos)
