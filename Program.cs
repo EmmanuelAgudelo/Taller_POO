@@ -201,6 +201,17 @@ namespace Desktop
                     }
                 }
             }
+            if (pregunta == "3")
+            {
+                var venta = new VentasServices();
+                venta.BuscarFactura(ListaVentas);
+            }
+            if (pregunta == "4")
+            {
+                var venta = new VentasServices();
+                venta.addFactura(ListaClientes, ListaProductos, ListaVentas);
+            }
+
 
 
 

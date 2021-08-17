@@ -76,8 +76,16 @@ namespace Taller_POO.Ventas
                 {
                     Console.WriteLine($"Nombre: {producto.nombre}........{producto.precio}x{producto.cantidad}");
                 }
+            } else
+            {
+                Console.WriteLine($"No se encontraron facturas con este identificador: {numeroFactura}");
             }
 
+
+        }
+
+        public void DeshabilitarFactura(List<Venta> ListaVentas)
+        {
 
         }
     }
