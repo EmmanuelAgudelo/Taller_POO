@@ -73,7 +73,7 @@ namespace Desktop
                         string preguntaModuloReportes = "si";
                         while (preguntaModuloReportes.Equals("si", StringComparison.OrdinalIgnoreCase))
                         {
-                            moduloReportes(ListaClientes, ListaProductos);
+                            moduloReportes(ListaClientes, ListaProductos, ListaVentas);
                             Console.WriteLine("desea realizar otra operación en este modulo");
                             preguntaModuloReportes = Console.ReadLine();
 
@@ -149,11 +149,7 @@ namespace Desktop
         public static void moduloProductos(List<Producto> ListaProductos)
         {
             int accion;
-            Console.WriteLine("¿Qué acción desea realizar?");
-            Console.WriteLine("1. Agregar producto");
-            Console.WriteLine("2. Buscar producto");
-            Console.WriteLine("3. Editar producto");
-            Console.WriteLine("4. Eliminar producto");
+            Console.WriteLine("¿Qué acción desea realizar?\n1. Agregar producto\n2. Buscar producto\n3. Editar producto\n4. Eliminar producto");
             accion = int.Parse(Console.ReadLine());
             if (accion == 1)
             {
@@ -182,48 +178,36 @@ namespace Desktop
         }
         public static void moduloVentas(List<Cliente> ListaClientes, List<Producto> ListaProductos, List<Venta> ListaVentas)
         {
-            Console.WriteLine("digite la acción que desea realizar");
-            string pregunta = Console.ReadLine();
-            if (pregunta == "1")
+            Console.WriteLine("\ndigite la acción que desea realizar\n1. Crear factura\n2. Buscar factura\n3. Deshabilitar factura");
+            int pregunta = int.Parse(Console.ReadLine());
+            if (pregunta == 1)
             {
                 var venta = new VentasServices();
                 venta.addFactura(ListaClientes, ListaProductos, ListaVentas);
             }
-            if (pregunta == "2")
-            {
-                foreach (var Factura in ListaVentas)
-                {
-                    Console.WriteLine($"numero factura: {Factura.numeroFactura}\nCedula cliente: {Factura.documento}\nValor total: {Factura.ValorTotal}");
-
-                    foreach (var producto in Factura.productos)
-                    {
-                        Console.WriteLine($"Nombre: {producto.nombre}........{producto.precio}x{producto.cantidad}");
-                    }
-                }
-            }
-            if (pregunta == "3")
+            if (pregunta == 2)
             {
                 var venta = new VentasServices();
                 venta.BuscarFactura(ListaVentas);
             }
-            if (pregunta == "4")
+            if (pregunta == 3)
             {
                 var venta = new VentasServices();
-                venta.addFactura(ListaClientes, ListaProductos, ListaVentas);
+                venta.DeshabilitarFactura(ListaVentas);
             }
 
 
 
 
         }
-        public static void moduloReportes(List<Cliente> ListaClientes, List<Producto> ListaProductos)
+        public static void moduloReportes(List<Cliente> ListaClientes, List<Producto> ListaProductos, List<Venta> ListaVentas)
         {
 
             System.Console.WriteLine("\n---------------------CLIENTES----------------------\n");
             System.Console.WriteLine("Documento      Nombre       Dirección       Telefono\n");
             foreach (var item in ListaClientes)
             {
-                // Console.Write(string.Format("{0} | {1} | {2} | {3}\n", item.Documento, item.Nombre, item.Direccion, item.Telefono));
+
                 System.Console.WriteLine($"{item.Documento,10:c} | {item.Nombre,9:c} | {item.Direccion,14:c} | {item.Telefono,10:c}");
             }
 
@@ -232,6 +216,21 @@ namespace Desktop
             foreach (var item in ListaProductos)
             {
                 System.Console.WriteLine($"{item.Codigo,6:c} | {item.Nombre,12:c} | {item.Precio,7:c} | {item.Cantidad,5}");
+            }
+
+            System.Console.WriteLine("\n---------------FACTURAS---------------");
+            foreach (var Factura in ListaVentas)
+            {
+                if (Factura.estado)
+                {
+                    Console.WriteLine($"\nNumero factura: {Factura.numeroFactura}\nCedula cliente: {Factura.documento}\n");
+                    foreach (var producto in Factura.productos)
+                    {
+                        Console.WriteLine($"Producto: {producto.nombre}........{producto.precio:c} x{producto.cantidad}");
+                    }
+                    System.Console.WriteLine($"\nPrecio total: {Factura.ValorTotal:c}");
+                }
+
             }
 
         }

@@ -41,7 +41,7 @@ namespace Taller_POO.Ventas
                     }
                 }
                 var producto = ListaProductos.Where(p => p.Codigo == codigo).FirstOrDefault();
-                Console.WriteLine($"digite la cantidad que desea agregar de: {producto.Nombre}");
+                Console.WriteLine($"digite la cantidad que desea agregar de {producto.Nombre}: ");
                 int cantidad = int.Parse(Console.ReadLine());
                 int valorProducto = producto.Precio * cantidad;
                 valorTotal += valorProducto;
@@ -69,14 +69,19 @@ namespace Taller_POO.Ventas
             if (verificarNumeroFactura)
             {
                 var Factura = ListaVentas.Where(f => f.numeroFactura == numeroFactura).FirstOrDefault();
-
-                Console.WriteLine($"numero factura: {Factura.numeroFactura}\nCedula cliente: {Factura.documento}\nValor total: {Factura.ValorTotal}");
-
-                foreach (var producto in Factura.productos)
+                if (Factura.estado)
                 {
-                    Console.WriteLine($"Nombre: {producto.nombre}........{producto.precio}x{producto.cantidad}");
+                    Console.WriteLine($"numero factura: {Factura.numeroFactura}\nCedula cliente: {Factura.documento}\nValor total: {Factura.ValorTotal}");
+
+                    foreach (var producto in Factura.productos)
+                    {
+                        Console.WriteLine($"Nombre: {producto.nombre}........{producto.precio}x{producto.cantidad}");
+                    }
                 }
-            } else
+                else { System.Console.WriteLine("La factura ha sido deshabilitada"); }
+
+            }
+            else
             {
                 Console.WriteLine($"No se encontraron facturas con este identificador: {numeroFactura}");
             }
@@ -86,7 +91,20 @@ namespace Taller_POO.Ventas
 
         public void DeshabilitarFactura(List<Venta> ListaVentas)
         {
+            Console.WriteLine("Digite el numero de la factura");
+            int numeroFactura = int.Parse(Console.ReadLine());
 
+            var verificarNumeroFactura = ListaVentas.Any(v => v.numeroFactura == numeroFactura);
+            if (verificarNumeroFactura)
+            {
+                var Factura = ListaVentas.Where(f => f.numeroFactura == numeroFactura).FirstOrDefault();
+                Factura.estado = false;
+                System.Console.WriteLine("La factura ha sido deshabilitada correctamente\n");
+            }
+            else
+            {
+                Console.WriteLine($"No se encontraron facturas con este identificador: {numeroFactura}");
+            }
         }
     }
 }
