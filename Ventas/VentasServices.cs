@@ -43,10 +43,18 @@ namespace Taller_POO.Ventas
                 var producto = ListaProductos.Where(p => p.Codigo == codigo).FirstOrDefault();
                 Console.WriteLine($"digite la cantidad que desea agregar de {producto.Nombre}: ");
                 int cantidad = int.Parse(Console.ReadLine());
-                int valorProducto = producto.Precio * cantidad;
-                valorTotal += valorProducto;
-                var ProductoDetalle = new VentaDetalles(producto.Nombre, producto.Precio, cantidad);
-                ListadoProductosFactura.Add(ProductoDetalle);
+                    if (cantidad <= producto.Cantidad)
+                     { 
+                        producto.Cantidad = producto.Cantidad - cantidad;
+                        int valorProducto = producto.Precio * cantidad;
+                        valorTotal += valorProducto;
+                        var ProductoDetalle = new VentaDetalles(producto.Nombre, producto.Precio, cantidad);
+                        ListadoProductosFactura.Add(ProductoDetalle);
+                        
+                     }else
+	                 {
+                        Console.WriteLine($"El articulo: {producto.Nombre} solo cuenta con: {producto.Cantidad} existencias");
+	                 }
                 Console.WriteLine("desea agregar otro producto?");
                 pregunta = Console.ReadLine();
 
